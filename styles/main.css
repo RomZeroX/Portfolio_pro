@@ -178,6 +178,22 @@ header nav {
     max-width: 800px;
 }
 
+.hero-header-flex {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-mini-profile {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+}
+
 .badge {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -316,8 +332,47 @@ header nav {
 }
 
 .project-img {
-    height: 300px;
+    height: 250px;
     overflow: hidden;
+    position: relative;
+    background: var(--bg-dark);
+}
+
+.project-graphic-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.variant-sap {
+    background: linear-gradient(135deg, #00D2FF 0%, #3a7bd5 100%);
+}
+
+.variant-decision {
+    background: linear-gradient(135deg, #7A5FFF 0%, #b06ab3 100%);
+}
+
+.placeholder-icon {
+    width: 60px;
+    height: 60px;
+    color: white;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
+    z-index: 2;
+    opacity: 0.9;
+}
+
+.graphic-decoration {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    transform: rotate(15deg);
+    opacity: 0.5;
 }
 
 .project-img img {
@@ -401,16 +456,42 @@ header nav {
     flex: 1;
 }
 
-.image-wrapper {
+.about-visual-box {
     position: relative;
     border-radius: 30px;
     overflow: hidden;
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, var(--bg-card), transparent);
+    border: 1px solid var(--border-glass);
 }
 
-.image-wrapper img {
+.visual-accent {
+    position: absolute;
+    top: -20%;
+    right: -20%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+    filter: blur(50px);
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.profile-image {
     width: 100%;
-    filter: brightness(0.8);
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 2;
+    transition: var(--transition);
+}
+
+.profile-frame {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--border-glass);
+}
+
+.profile-frame:hover .profile-image {
+    transform: scale(1.02);
 }
 
 .stats-list {
