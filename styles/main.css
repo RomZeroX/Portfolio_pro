@@ -121,6 +121,8 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 120px;
+    /* Ensures space for the logo */
 }
 
 .logo img {
@@ -140,11 +142,12 @@ header nav {
 
 /* Hero */
 #hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 80px;
+    padding-top: 160px;
+    /* Adjusted for the larger logo */
 }
 
 .hero-bg {
